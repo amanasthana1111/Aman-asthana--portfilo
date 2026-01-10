@@ -8,9 +8,9 @@ const Hero = () => {
 
         <p className=" text-[15px] max-w-3xl  leading-relaxed text-gray-300 mt-4">
           I build{" "}
-          <span className="text-[#e8a87c]">full-stack applications.</span>{" "}
+          <span className="text-orange-400">full-stack applications.</span>{" "}
           Passionate about creating projects that make a{" "}
-          <span className="text-[#e8a87c]"> real-world impact.</span> I focus on
+          <span className="text-orange-400"> real-world impact.</span> I focus on
           clean code and user experience.
         </p>
 
@@ -21,8 +21,8 @@ const Hero = () => {
                    bg-[#161616] border border-white/10 text-gray-200 text-sm 
                    align-middle"
           >
-            <a href="https://pre-well-frontend.vercel.app/">
-              <span className="leading-none cursor-pointer text-red-600">
+            <a target="_blank" href="https://pre-well-frontend.vercel.app/">
+              <span   className="leading-none cursor-pointer text-red-600">
                 Folify
               </span>
             </a>

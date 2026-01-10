@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 const ProjectCard = ({
   projectName,
   projectDesc,
@@ -9,10 +10,35 @@ const ProjectCard = ({
   deployLink,
 }) => {
   const [open, setOpen] = useState(false);
+  const techColorMap = {
+    express: "#000000",
+    "mongodb (mongoose)": "#47A248",
+    redis: "#DC382D", 
+    jwt: "#000000", 
+    cookies: "#F59E0B",
+    bcrypt: "white", 
+    multer: "#6B7280",
+    zod: "#3B82F6",
+    cloudinary: "#3448C5",
+    "google gemini ai": "#4285F4", 
+    "google gemini ai api": "#4285F4",
+    react: "#61DAFB",
+    "react.js": "#61DAFB",
+    "react router": "#CA4245",
+    "tailwind css": "#06B6D4", 
+    javascript: "#F7DF1E",
+    html5: "#E34F26", 
+    css3: "#1572B6", 
+    "chart.js": "#FF6384",
+    "coingecko api": "#8DC647",
+  };
 
   return (
-    <div className=" font-[Myfont2] w-full rounded-xl border border-white/10 bg-[#131311] p-5 hover:border-white/20 transition-colors mb-3">
-      {/* Title */}
+    <div
+      className=" font-[Myfont2] w-full rounded-xl border border-dashed
+ border-white/10 bg-[#131311] p-5 hover:border-white/20 transition-colors mb-3"
+    >
+
       <h3 className="text-base text-white">{projectName}</h3>
 
       {/* Description */}
@@ -20,16 +46,33 @@ const ProjectCard = ({
         {projectDesc}
       </p>
       {open && (
-        <ul className="mt-4 mb-5 space-y-2 text-sm text-gray-400 list-disc list-inside">
-          {projectSemiDesc.map((point, index) => (
-            <li key={index}>{point}</li>
-          ))}
-        </ul>
+        <div>
+          <ul className="mt-4 mb-5 space-y-2 text-sm text-gray-400 list-disc list-inside">
+            {projectSemiDesc.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
+          <div>
+            {techStack.map((ele, index) => (
+              <span
+                onMouseEnter={(e) => {
+                  const key = ele.toLowerCase();
+                  e.currentTarget.style.color = techColorMap[key];
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = "#f97316";
+                }}
+                key={index}
+                className="inline-flex items-center gap-2 px-3 py-1 mx-1 rounded-md border border-white/10 text-[#f97316] text-sm align-middle hover:border-white/30"
+              >
+                <span className="leading-none cursor-pointer">{ele}</span>
+              </span>
+            ))}
+          </div>
+        </div>
       )}
 
-      {/* Footer */}
       <div className="mt-2 flex items-center justify-between text-[11px]">
-        {/* Know more */}
         <button
           onClick={() => setOpen(!open)}
           className="flex items-center gap-1 text-gray-400 hover:text-white transition-colors"

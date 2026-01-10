@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "./Card";
 
 const Project = () => {
   const project = [
@@ -15,7 +15,7 @@ const Project = () => {
         "and reliable API error handling.",
       ],
       techStack:
-        "Express.js, MongoDB (Mongoose), Redis, JWT, Cookies, Google Gemini AI, Cloudinary, Zod, Multer, bcrypt",
+        ["Express" , "MongoDB (Mongoose)", "Redis", "JWT", "Cookies", "Google Gemini AI", "Cloudinary", "Zod", "Multer", "bcrypt"],
       githubLink: "https://github.com/amanasthana1111/PreWell--Backend",
       deployLink: "https://pre-well-frontend.vercel.app/",
     },
@@ -30,7 +30,7 @@ const Project = () => {
         "Created modular and reusable components for fast iteration",
       ],
       techStack:
-        "React, React Router, Tailwind CSS, Express.js, Google Gemini AI API",
+        ["React", "React Router", "Tailwind CSS", "Express", "Google Gemini AI API"],
       githubLink: "https://github.com/amanasthana1111/GENIFY--Backend",
       deployLink: "https://regal-smakager-739bd9.netlify.app/",
     },
@@ -44,7 +44,7 @@ const Project = () => {
         "interactive Chart.js visualizations",
         "and a crypto news section.",
       ],
-      techStack: "React.js, JavaScript, Chart.js, CoinGecko API, HTML5, CSS3",
+      techStack: ["React.js", "JavaScript", "Chart.js", "CoinGecko API", "HTML5", "CSS3"],
       githubLink: "https://github.com/amanasthana1111/CryptoTracker-main",
       deployLink: "https://unrivaled-pie-767488.netlify.app/",
     },
@@ -62,6 +62,7 @@ const Project = () => {
             projectName={ele.projectName}
             projectSemiDesc={ele.projectSemiDesc}
             projectDesc={ele.projectDesc}
+            techStack={ele.techStack}
             githubLink={ele.githubLink}
             deployLink={ele.deployLink}
           ></ProjectCard>
