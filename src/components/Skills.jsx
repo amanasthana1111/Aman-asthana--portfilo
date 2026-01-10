@@ -68,7 +68,7 @@ const Skills = () => {
         Skills & Tools
       </div>
 
-      <div className="flex flex-wrap gap-3 mt-4">
+      <div className="flex flex-wrap gap-3 mt-4 cursor-grab">
         {skills.map((skill) => (
           <div
             key={skill.name}

@@ -77,7 +77,7 @@ const ProjectCard = ({
           onClick={() => setOpen(!open)}
           className="flex items-center gap-1 text-gray-400 hover:text-white transition-colors"
         >
-          <span>{open ? "Show less " : "Know More "}</span>
+          <span className="cursor-pointer">{open ? "Show less " : "Know More "}</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-4 w-4"
@@ -102,9 +102,9 @@ const ProjectCard = ({
           </svg>
         </button>
 
-        {/* Links */}
+        
         <div className="flex items-center gap-6">
-          {/* Repo */}
+          
           <a
             href={githubLink}
             target="_blank"
@@ -122,7 +122,6 @@ const ProjectCard = ({
             <span>Repo</span>
           </a>
 
-          {/* Visit */}
           <a
             href={deployLink}
             target="_blank"

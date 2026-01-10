@@ -26,7 +26,7 @@ const Github = () => {
         className=" font-[Myfont2] w-full rounded-xl border border-dashed
  border-white/10 bg-[#131311] p-5 hover:border-white/20 transition-colors mb-3"
       >
-        <img src="https://ghchart.rshah.org/22c55e/amanasthana1111" />
+        <a target="_blank" href="https://github.com/amanasthana1111"><img src="https://ghchart.rshah.org/22c55e/amanasthana1111" /></a>
         <div className="flex justify-between">
           <h3 className="mt-2 text-sm font-['MyFont1'] text-gray-500">
             Total: {contributions} contributions

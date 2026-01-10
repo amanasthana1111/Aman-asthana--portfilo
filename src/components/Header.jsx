@@ -24,8 +24,8 @@ export default function Header() {
     const vistorFn = async () => {
       try {
         const res =
-          1 || (await axios.get("https://api.restful-api.dev/objects"));
-        const data = "1111 visitors" || res.data;
+          1 || (await axios.get(""));
+        const data = "503 visitors" || res.data;
         setVistor(data);
       } catch (error) {
         setVistor(null);
