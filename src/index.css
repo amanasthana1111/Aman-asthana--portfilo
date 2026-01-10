@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
-:root{
+:root {
   background-color: #0f0f0f;
 }
+
 
 @font-face {
   font-family: 'MyFont1';
@@ -11,6 +12,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'MyFont2';
   src: url('../font/font2.woff2') format('woff2');

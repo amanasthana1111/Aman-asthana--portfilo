@@ -25,10 +25,10 @@ export default function Header() {
       try {
         const res =
           1 || (await axios.get("https://api.restful-api.dev/objects"));
-        const data = res.data;
-        setVistor(data.vistor);
+        const data = "1111 visitors" || res.data;
+        setVistor(data);
       } catch (error) {
-        setVistor("11,573");
+        setVistor(null);
       }
     };
     vistorFn();
@@ -36,9 +36,9 @@ export default function Header() {
 
   return (
     <div className="py-4">
-      <div className="flex items-center justify-between text-sm mt-4 text-[#787572]">
-        <div style={{ fontFamily: "MyFont2" }} className="font-medium">
-          {visitors} visitors
+      <div className="flex items-center justify-between text-sm mt-8 text-[#787572]">
+        <div style={{ fontFamily: "MyFont2" }} >
+          {visitors ? visitors : "..."}
         </div>
         <div className="flex items-center gap-4">
           <span style={{ fontFamily: "MyFont2" }}>{time} GMT+5:30</span>
