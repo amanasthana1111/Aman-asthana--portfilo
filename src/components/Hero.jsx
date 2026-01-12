@@ -41,8 +41,8 @@ const Hero = () => {
 
         <p className="text-base text-gray-400 mt-4">
           Open to{" "}
-          <span className="font-semibold text-orange-500">collaborations</span>{", "}
-            <span className="font-semibold text-orange-500">internships</span>,
+          <span className=" text-orange-500">collaborations</span>{", "}
+            <span className=" text-orange-500">internships</span>,
           engineering challenges.
         </p>
       </div>

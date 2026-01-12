@@ -25,13 +25,9 @@ const Skills = () => {
     //   { name: "NeonDB", logo: "https://cdn.simpleicons.org/neon/00E599" },
     { name: "NextAuth", logo: "https://cdn.simpleicons.org/auth0/EB5424" },
     { name: "Zod", logo: "https://cdn.simpleicons.org/zod/3B82F6" },
-    { name: "Zustand", logo: "https://cdn.simpleicons.org/react/61DAFB" },
+    { name: "Zustand", logo: "https://hexmos.com/freedevtools/svg_icons/zustand/zustand-original.svg" },
     { name: "Redis", logo: "https://cdn.simpleicons.org/redis/DC382D" },
     //   { name: "Docker", logo: "https://cdn.simpleicons.org/docker/2496ED" },
-    {
-      name: "WebSocket",
-      logo: "https://cdn.simpleicons.org/socketdotio/FFFFFF",
-    },
     //   { name: "CI/CD", logo: "https://cdn.simpleicons.org/githubactions/2088FF" },
     //   { name: "Turborepo", logo: "https://cdn.simpleicons.org/turborepo/FFFFFF" },
     { name: "Postman", logo: "https://cdn.simpleicons.org/postman/FF6C37" },
@@ -76,8 +72,7 @@ const Skills = () => {
                    border border-white/10 bg-[#131311]
                    text-sm text-gray-200 hover:border-white/30"
           >
-            <img
-             src={skill.logo} alt={skill.name} className="w-4 h-4" />
+            <img src={skill.logo} alt={skill.name} className="w-4 h-4" />
             <span className=" hover:text-orange-400  ">{skill.name}</span>
           </div>
         ))}
