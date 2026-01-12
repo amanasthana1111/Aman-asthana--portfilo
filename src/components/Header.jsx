@@ -23,9 +23,15 @@ export default function Header() {
   useEffect(() => {
     const vistorFn = async () => {
       try {
-        const res =
-          1 || (await axios.get(""));
-        const data = "503 visitors" || res.data;
+        const res1 = await axios.get(
+          "https://portfolio-backend-8pe7.onrender.com/visit"
+        );
+        console.log(res1)
+        const res = await axios.get(
+          "https://portfolio-backend-8pe7.onrender.com/total-visitors"
+        );
+
+        const data = res.data;
         setVistor(data);
       } catch (error) {
         setVistor(null);
@@ -37,7 +43,7 @@ export default function Header() {
   return (
     <div className="py-4">
       <div className="flex items-center justify-between text-sm mt-8 text-[#787572]">
-        <div style={{ fontFamily: "MyFont2" }} >
+        <div style={{ fontFamily: "MyFont2" }}>
           {visitors ? visitors : "..."}
         </div>
         <div className="flex items-center gap-4">

@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <section className="w-full text-white mt-4 mb-4">
       <div className="font-['MyFont2']">
-        <a target="_blank" href="https://drive.google.com/file/d/1qrfo8rwNNcxULqe1kkMp57t8RakHSFfa/view?usp=sharing"><h1 className="text-xl">Aman Asthana</h1></a>
+        <a target="_blank" href="https://drive.google.com/file/d/1qrfo8rwNNcxULqe1kkMp57t8RakHSFfa/view?usp=sharing"><h1 className="text-xl cursor-pointer">Aman Asthana</h1></a>
 
         <p className="text-base mt-2 text-[#787572]">Software Engineer</p>
 
