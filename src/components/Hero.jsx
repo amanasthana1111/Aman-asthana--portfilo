@@ -33,15 +33,16 @@ const Hero = () => {
 
         <p className="text-base text-gray-400 mt-4">
           Most days I work with{" "}
-          <span className="text-white font-semibold">Next.js</span>,{" "}
-          <span className="text-white font-semibold">Express.js</span>, and{" "}
-          <span className="text-white font-semibold">TypeScript</span>, building
+          <span className="text-orange-500 font-semibold">Next.js</span>,{" "}
+          <span className="text-orange-500 font-semibold">Express.js</span>, and{" "}
+          <span className="text-orange-500 font-semibold">TypeScript</span>, building
           systems that are fast, reliable, and visually polished.
         </p>
 
         <p className="text-base text-gray-400 mt-4">
           Open to{" "}
-          <span className="font-semibold">collaborations, internships</span>,
+          <span className="font-semibold text-orange-500">collaborations</span>{", "}
+            <span className="font-semibold text-orange-500">internships</span>,
           engineering challenges.
         </p>
       </div>

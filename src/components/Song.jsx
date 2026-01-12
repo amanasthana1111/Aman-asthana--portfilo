@@ -37,7 +37,7 @@ const Song = () => {
 
       <button
         onClick={togglePlay}
-        className="fixed bottom-6 right-6 z-50 bg-[#171717] backdrop-blur-md border border-white/20 text-red-500 p-4 rounded-full shadow-lg hover:scale-105 hover:bg-orange-500 hover:text-white transition duration-300 ease-in-out cursor-pointer"
+        className="fixed bottom-6 right-6 z-50 bg-[#171717] backdrop-blur-md border border-white/20 text-red-900 p-4 rounded-full shadow-lg hover:scale-105 hover:bg-orange-500 hover:text-white transition duration-300 ease-in-out cursor-pointer"
       >
         {playing ? (
           // Pause Icon
