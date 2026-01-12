@@ -23,9 +23,8 @@ export default function Header() {
   useEffect(() => {
     const vistorFn = async () => {
       try {
-        const res =
-          1 || (await axios.get(""));
-        const data = "503 visitors" || res.data;
+        const res = await axios.get("https://portfolio-backend-8pe7.onrender.com/visit");
+        const data = res.data.totalVisitors;
         setVistor(data);
       } catch (error) {
         setVistor(null);
