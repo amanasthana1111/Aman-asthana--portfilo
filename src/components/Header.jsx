@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState,useRef } from "react";
 import axios from "axios";
 
 export default function Header() {
+  const hasRun = useRef(false);
   const [visitors, setVistor] = useState(0);
   const [time, setTime] = useState("");
 
@@ -20,25 +21,29 @@ export default function Header() {
 
     return () => clearInterval(interval);
   }, []);
-  useEffect(() => {
-    const vistorFn = async () => {
-      try {
-        const res1 = await axios.get(
-          "https://portfolio-backend-8pe7.onrender.com/visit"
-        );
-        console.log(res1)
-        const res = await axios.get(
-          "https://portfolio-backend-8pe7.onrender.com/total-visitors"
-        );
+ useEffect(() => {
+  if (hasRun.current) return;
+  hasRun.current = true;
 
-        const data = res?.data?.totalVisitors;
-        setVistor(data);
-      } catch (error) {
-        setVistor(null);
-      }
-    };
-    vistorFn();
-  }, []);
+  const vistorFn = async () => {
+    try {
+      await axios.get(
+        "https://portfolio-backend-8pe7.onrender.com/visit",
+        { withCredentials: true }
+      );
+
+      const res = await axios.get(
+        "https://portfolio-backend-8pe7.onrender.com/total-visitors"
+      );
+
+      setVistor(res.data.totalVisitors);
+    } catch (error) {
+      setVistor(null);
+    }
+  };
+
+  vistorFn();
+}, []);
 
   return (
     <div className="py-4">
