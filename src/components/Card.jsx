@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 
+
 const ProjectCard = ({
   projectName,
   projectDesc,
@@ -33,13 +34,16 @@ const ProjectCard = ({
     "coingecko api": "#8DC647",
   };
 
+
+  
+
   return (
     <div
       className=" font-[Myfont2] w-full rounded-xl border border-dashed
  border-white/10 bg-[#131311] p-5 hover:border-white/20 transition-colors mb-3"
     >
 
-      <h3 className="text-base text-white">{projectName}</h3>
+      <h3  className="text-base text-white">{projectName}</h3>
 
       {/* Description */}
       <p className="mt-2 text-sm text-gray-400 leading-relaxed max-w-3xl">

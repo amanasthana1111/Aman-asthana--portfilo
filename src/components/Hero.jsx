@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section className="w-full text-white mt-5 mb-9">
+    <section className="w-full text-white mt-4 mb-4">
       <div className="font-['MyFont2']">
         <a target="_blank" href="https://drive.google.com/file/d/1qrfo8rwNNcxULqe1kkMp57t8RakHSFfa/view?usp=sharing"><h1 className="text-xl">Aman Asthana</h1></a>
 

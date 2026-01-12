@@ -64,7 +64,7 @@ const Skills = () => {
 
   return (
     <>
-      <div className="text-sm font-['MyFont1'] text-gray-500 mt-12">
+      <div className="text-sm font-['MyFont1'] text-gray-500 mt-8">
         Skills & Tools
       </div>
 

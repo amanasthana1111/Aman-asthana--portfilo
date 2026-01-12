@@ -52,7 +52,7 @@ const Project = () => {
 
   return (
     <>
-      <div className=" text-sm font-['MyFont1'] text-gray-500 mb-3">
+      <div className=" text-sm font-['MyFont1'] text-gray-500 mb-3 mt-6">
         Projects I've Built
       </div>
       <div>
