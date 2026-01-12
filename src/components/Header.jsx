@@ -31,7 +31,7 @@ export default function Header() {
           "https://portfolio-backend-8pe7.onrender.com/total-visitors"
         );
 
-        const data = res.data;
+        const data = res?.data?.totalVisitors;
         setVistor(data);
       } catch (error) {
         setVistor(null);
