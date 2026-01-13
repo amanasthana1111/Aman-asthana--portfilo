@@ -1,3 +1,5 @@
+import { motion } from "motion/react"
+import { DragMe } from "./DragMe";
 const Skills = () => {
   const skills = [
     {
@@ -60,13 +62,26 @@ const Skills = () => {
 
   return (
     <>
-      <div className="text-sm font-['MyFont1'] text-gray-500 mt-8">
-        Skills & Tools
+      <div className="text-sm font-['MyFont1'] text-gray-500 mt-8 flex justify-between">
+       <div> Skills & Tools</div>
+       <div>
+        <DragMe/>
+       </div>
+
       </div>
 
-      <div className="flex flex-wrap gap-3 mt-4 cursor-grab">
+      <div 
+       className="flex flex-wrap gap-3 mt-4 cursor-grab">
         {skills.map((skill) => (
-          <div
+          <motion.div
+          drag
+          dragConstraints={{
+            top : 0,
+            right:0,
+            left:0,
+            bottom:0
+          }}
+          dragElastic={0.3}
             key={skill.name}
             className="flex items-center gap-2 px-3 py-2 rounded-md
                    border border-white/10 bg-[#131311]
@@ -74,7 +89,7 @@ const Skills = () => {
           >
             <img src={skill.logo} alt={skill.name} className="w-4 h-4" />
             <span className=" hover:text-orange-400  ">{skill.name}</span>
-          </div>
+          </motion.div>
         ))}
       </div>
     </>

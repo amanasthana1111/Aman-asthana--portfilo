@@ -1,4 +1,7 @@
-import React from 'react'
+import {motion} from 'motion/react'
+import { DragMe } from './DragMe';
+
+
 
 const Connect = () => {
     const connects = [
@@ -46,21 +49,34 @@ const Connect = () => {
 
   return (
     <div className="mb-12">
-    <div className="text-sm font-['MyFont1'] text-gray-500 mt-12 mb-3">
+    <div className="text-sm font-['MyFont1'] text-gray-500 mt-12 mb-3 flex justify-between">
         Connect with Me
+        <div>
+          <DragMe/>
+        </div>
       </div>
       <div className="flex flex-wrap gap-3 mt-4">
         {connects.map((connect) => (
-          <div
+          <motion.div
             key={connect.name}
+            drag
+            dragConstraints= {{
+              top : 0,
+              bottom:0,
+              left:0,
+              right:0
+
+            }}
+            dragElastic = {0.3}
             className="flex items-center gap-2 px-3 py-2 rounded-md
                    border border-white/10 bg-[#131311]
-                   text-sm text-gray-200 hover:border-white/30"
+                   text-sm text-gray-200 hover:border-white/30
+                   cursor-grab "
           >
             <img
              src={connect.logo} alt={connect.name} className="w-4 h-4" />
             <a  target="_blank" href={connect.link}><span className=" hover:text-orange-400  ">{connect.name}</span></a>
-          </div>
+          </motion.div>
         ))}
       </div>
       
