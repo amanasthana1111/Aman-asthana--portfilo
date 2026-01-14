@@ -36,11 +36,6 @@ const Connect = () => {
     link: "https://instagram.com/aman_asthana12",
   },
   {
-    name: "Twitter (X)",
-    logo: "https://cdn-icons-png.flaticon.com/512/733/733579.png",
-    link: "https://x.com/aman_dev12",
-  },
-  {
     name: "WhatsApp",
     logo: "https://cdn-icons-png.flaticon.com/512/733/733585.png",
     link: "https://wa.me/917982174178",
