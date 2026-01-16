@@ -22,7 +22,7 @@ const Hero = () => {
                    align-middle"
           >
             <a target="_blank" href="https://pre-well-frontend.vercel.app/">
-              <span   className="leading-none cursor-pointer text-red-700">
+              <span className="leading-none cursor-pointer text-red-700">
                 Folify
               </span>
             </a>
