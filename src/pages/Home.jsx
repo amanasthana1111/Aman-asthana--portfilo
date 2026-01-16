@@ -1,4 +1,5 @@
 import Connect from "../components/Connect";
+import Credit from "../components/Credit";
 import Footer from "../components/Footer";
 import Github from "../components/Github";
 import Header from "../components/Header";
@@ -20,6 +21,7 @@ const Home = () => {
         <Connect />
         <Footer />
         <Song />
+        <Credit/>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 const ProjectCard = ({
   projectName,
   projectDesc,
@@ -43,40 +43,40 @@ const ProjectCard = ({
       <p className="mt-2 text-sm text-gray-400 leading-relaxed max-w-3xl">
         {projectDesc}
       </p>
-      {open && (
-        <div>
-          <ul className="mt-4 mb-5 space-y-2 text-sm text-gray-400 list-disc list-inside">
-            {projectSemiDesc.map((point, index) => (
-              <li key={index}>{point}</li>
-            ))}
-          </ul>
-          <div>
-            {techStack.map((ele, index) => (
-              <motion.span
-                onMouseEnter={(e) => {
-                  const key = ele.toLowerCase();
-                  e.currentTarget.style.color = techColorMap[key];
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = "#f97316";
-                }}
-                key={index}
-                drag
-                dragConstraints={{
-                  top: 0,
-                  right: 0,
-                  left: 0,
-                  bottom: 0,
-                }}
-                dragElastic={0.3}
-                className="inline-flex items-center gap-2 px-3 py-1 mx-1 rounded-md border border-white/10 text-[#f97316] text-sm align-middle hover:border-white/30"
-              >
-                <span className="leading-none cursor-grab">{ele}</span>
-              </motion.span>
-            ))}
-          </div>
-        </div>
-      )}
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            key="details"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{
+              height: { duration: 1, ease: "easeInOut" },
+              opacity: { duration: 0.4 },
+            }}
+            className="overflow-hidden"
+          >
+            <ul className="mt-4 mb-5 space-y-2 text-sm text-gray-400 list-disc list-inside">
+              {projectSemiDesc.map((point, index) => (
+                <li key={index}>{point}</li>
+              ))}
+            </ul>
+
+            <div>
+              {techStack.map((ele, index) => (
+                <motion.span
+                  key={index}
+                  drag
+                  dragElastic={0.3}
+                  className="inline-flex items-center gap-2 px-3 py-1 mx-1 rounded-md border border-white/10 text-[#f97316] text-sm"
+                >
+                  {ele}
+                </motion.span>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <div className="mt-2 flex items-center justify-between text-[11px]">
         <button

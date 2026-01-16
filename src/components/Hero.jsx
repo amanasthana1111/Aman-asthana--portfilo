@@ -17,12 +17,12 @@ const Hero = () => {
         <p className="text-gray-400 mt-4 leading-relaxed">
           Previously worked on{" "}
           <span
-            className="inline-flex items-center gap-2 px-3 py-1 mx-1 rounded-md 
+            className="inline-flex items-center gap-2 px-2 py-0.5 mx-1 rounded-md 
                    bg-[#161616] border border-white/10 text-gray-200 text-sm 
                    align-middle"
           >
             <a target="_blank" href="https://pre-well-frontend.vercel.app/">
-              <span   className="leading-none cursor-pointer text-red-600">
+              <span   className="leading-none cursor-pointer text-red-700">
                 Folify
               </span>
             </a>
@@ -33,9 +33,9 @@ const Hero = () => {
 
         <p className="text-base text-gray-400 mt-4">
           Most days I work with{" "}
-          <span className="text-orange-500 font-semibold">Next.js</span>,{" "}
-          <span className="text-orange-500 font-semibold">Express.js</span>, and{" "}
-          <span className="text-orange-500 font-semibold">TypeScript</span>, building
+          <span className="text-orange-500 ">Next.js</span>,{" "}
+          <span className="text-orange-500 ">Express.js</span>, and{" "}
+          <span className="text-orange-500 ">TypeScript</span>, building
           systems that are fast, reliable, and visually polished.
         </p>
 
