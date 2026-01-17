@@ -23,10 +23,10 @@ export default function Header() {
   useEffect(() => {
     const vistorFn = async () => {
       try {
-        // const res = await axios.get("https://portfolio-backend-8pe7.onrender.com/visit" , {
-        //   withCredentials : true
-        // });
-        const data = "1,490 visitors" || res.data.totalVisitors;
+        const res = await axios.get("https://portfolio-backend-1-6xag.onrender.com/api/visit" , {
+          withCredentials : true
+        });
+        const data = res.data.total.toLocaleString();
         setVistor(data);
       } catch (error) {
         setVistor(null);
@@ -39,7 +39,7 @@ export default function Header() {
     <div className="py-4">
       <div className="flex items-center justify-between text-sm mt-8 text-[#787572]">
         <div style={{ fontFamily: "MyFont2" }} >
-          {visitors ? visitors : "..."}
+          {visitors ? `${visitors} visitors ` : "..."}
         </div>
         <div className="flex items-center gap-4">
           <span style={{ fontFamily: "MyFont2" }}>{time} GMT+5:30</span>
