@@ -23,7 +23,7 @@ export default function Header() {
   useEffect(() => {
     const vistorFn = async () => {
       try {
-        const res = await axios.get("https://portfolio-backend-1-6xag.onrender.com/api/visit" , {
+        const res = await axios.get("https://aman-asthana-backend.onrender.com/api/visit" ,{
           withCredentials : true
         });
         const data = res.data.total.toLocaleString();
