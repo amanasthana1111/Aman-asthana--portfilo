@@ -2,7 +2,12 @@ const Hero = () => {
   return (
     <section className="w-full text-white mt-4 mb-4">
       <div className="font-['MyFont2']">
-        <a target="_blank" href="https://drive.google.com/file/d/1qrfo8rwNNcxULqe1kkMp57t8RakHSFfa/view?usp=sharing"><h1 className="text-xl cursor-pointer">Aman Asthana</h1></a>
+        <a
+          target="_blank"
+          href="https://drive.google.com/file/d/1qrfo8rwNNcxULqe1kkMp57t8RakHSFfa/view?usp=sharing"
+        >
+          <h1 className="text-xl cursor-pointer">Aman Asthana</h1>
+        </a>
 
         <p className="text-base mt-2 text-[#787572]">Software Engineer</p>
 
@@ -10,8 +15,8 @@ const Hero = () => {
           I build{" "}
           <span className="text-orange-400">full-stack applications.</span>{" "}
           Passionate about creating projects that make a{" "}
-          <span className="text-orange-400"> real-world impact.</span> I focus on
-          clean code and user experience.
+          <span className="text-orange-400"> real-world impact.</span> I focus
+          on clean code and user experience.
         </p>
 
         <p className="text-gray-400 mt-4 leading-relaxed">
@@ -35,15 +40,22 @@ const Hero = () => {
           Most days I work with{" "}
           <span className="text-orange-500 ">Next.js</span>,{" "}
           <span className="text-orange-500 ">Express.js</span>, and{" "}
-          <span className="text-orange-500 ">TypeScript</span>, building
-          systems that are fast, reliable, and visually polished.
+          <span className="text-orange-500 ">TypeScript</span>, building systems
+          that are fast, reliable, and visually polished.
         </p>
 
         <p className="text-base text-gray-400 mt-4">
-          Open to{" "}
-          <span className=" text-orange-500">collaborations</span>{", "}
-            <span className=" text-orange-500">internships</span>,
-          engineering challenges.
+          Open to <span className=" text-orange-500">collaborations</span>
+          {", "}
+          <span className=" text-orange-500">internships</span>, engineering
+          challenges.{" "}
+          <a
+            href="https://drive.google.com/file/d/1qrfo8rwNNcxULqe1kkMp57t8RakHSFfa/view?usp=sharing"
+            target="_blank"
+            className="text-orange-500"
+          >
+            View Resume
+          </a>
         </p>
       </div>
     </section>

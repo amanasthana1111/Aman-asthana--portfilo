@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import Connect from "../components/Connect";
 import Credit from "../components/Credit";
 import Footer from "../components/Footer";
@@ -6,7 +7,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Project from "../components/Project";
 import Skills from "../components/Skills";
-import Song from "../components/Song";
+const Song = lazy(() => import("../components/Song"));
 
 const Home = () => {
   return (
@@ -20,8 +21,14 @@ const Home = () => {
         <Github />
         <Connect />
         <Footer />
-        <Song />
-        <Credit/>
+        <Suspense
+          fallback={
+            <p className="text-gray-500 text-sm mt-6">Loading music...</p>
+          }
+        >
+          <Song />
+        </Suspense>
+        <Credit />
       </div>
     </div>
   );

@@ -43,21 +43,6 @@ export default function Header() {
         </div>
         <div className="flex items-center gap-4">
           <span style={{ fontFamily: "MyFont2" }}>{time} GMT+5:30</span>
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={1.5}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364-1.414 1.414M7.05 16.95l-1.414 1.414m0-12.728L7.05 7.05m9.9 9.9 1.414 1.414M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-            />
-          </svg>
         </div>
       </div>
     </div>
