@@ -7,6 +7,7 @@ const ProjectCard = ({
   techStack,
   githubLink,
   deployLink,
+  imgLink,
 }) => {
   const [open, setOpen] = useState(false);
   const techColorMap = {
@@ -61,7 +62,16 @@ const ProjectCard = ({
                 <li key={index}>{point}</li>
               ))}
             </ul>
-
+            <div className="my-4 w-full">
+              <img
+                src={imgLink}
+                alt="Dog portrait"
+                width={612}
+                height={612}
+                className="w-full h-auto rounded-lg object-cover"
+                priority
+              />
+            </div>
             <div>
               {techStack.map((ele, index) => (
                 <motion.span

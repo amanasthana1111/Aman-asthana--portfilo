@@ -1,5 +1,8 @@
-
 import ProjectCard from "./Card";
+import folify from "../assets/folify.png"
+import crypto from "../assets/crypto.png"
+import genify from "../assets/genify.png"
+import npm from "../assets/npm.png"
 
 const Project = () => {
   const project = [
@@ -14,11 +17,51 @@ const Project = () => {
         "strict input validation using Zod",
         "and reliable API error handling.",
       ],
-      techStack:
-        ["Express" , "MongoDB (Mongoose)", "Redis", "JWT", "Cookies", "Google Gemini AI", "Cloudinary", "Zod", "Multer", "bcrypt"],
+      techStack: [
+        "Express",
+        "MongoDB (Mongoose)",
+        "Redis",
+        "JWT",
+        "Cookies",
+        "Google Gemini AI",
+        "Cloudinary",
+        "Zod",
+        "Multer",
+        "bcrypt",
+      ],
+      img :folify,
       githubLink: "https://github.com/amanasthana1111/PreWell--Backend",
       deployLink: "https://pre-well-frontend.vercel.app/",
     },
+    {
+      projectName: "create-backend-setup",
+      projectDesc:
+        "An interactive CLI tool that scaffolds a production-ready Node.js backend with modern tooling and best practices.",
+      projectSemiDesc: [
+        "Instant backend setup with Express and TypeScript",
+        "Schema validation using Zod",
+        "ORM support with Prisma or Mongoose",
+        "Authentication setup with bcrypt and JSON Web Tokens",
+        "Preconfigured CORS, dotenv, and cookie-parser",
+        "Clean, scalable folder structure for real-world projects",
+      ],
+      techStack: [
+        "Node.js",
+        "Express.js",
+        "TypeScript",
+        "Zod",
+        "Prisma",
+        "Mongoose",
+        "bcrypt",
+        "jsonwebtoken",
+        "dotenv",
+        "cors",
+      ],
+      img : npm,
+      githubLink: "https://github.com/amanasthana1111/create-backend-setup",
+      deployLink: "https://create-backend-setup-frontend.vercel.app?_vercel_share=JFBNaK5Hl9TQTYMWakHw9fjwtXQhmgyk",
+    },
+
     {
       projectName: "Genify",
       projectDesc:
@@ -29,8 +72,14 @@ const Project = () => {
         "Enabled ZIP downloads for generated templates",
         "Created modular and reusable components for fast iteration",
       ],
-      techStack:
-        ["React", "React Router", "Tailwind CSS", "Express", "Google Gemini AI API"],
+      techStack: [
+        "React",
+        "React Router",
+        "Tailwind CSS",
+        "Express",
+        "Google Gemini AI API",
+      ],
+      img : genify,
       githubLink: "https://github.com/amanasthana1111/GENIFY--Backend",
       deployLink: "https://regal-smakager-739bd9.netlify.app/",
     },
@@ -44,7 +93,15 @@ const Project = () => {
         "interactive Chart.js visualizations",
         "and a crypto news section.",
       ],
-      techStack: ["React.js", "JavaScript", "Chart.js", "CoinGecko API", "HTML5", "CSS3"],
+      techStack: [
+        "React.js",
+        "JavaScript",
+        "Chart.js",
+        "CoinGecko API",
+        "HTML5",
+        "CSS3",
+      ],
+      img : crypto,
       githubLink: "https://github.com/amanasthana1111/CryptoTracker-main",
       deployLink: "https://unrivaled-pie-767488.netlify.app/",
     },
@@ -65,6 +122,7 @@ const Project = () => {
             techStack={ele.techStack}
             githubLink={ele.githubLink}
             deployLink={ele.deployLink}
+            imgLink={ele.img}
           ></ProjectCard>
         ))}
       </div>
