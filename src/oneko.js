@@ -87,6 +87,7 @@
 
   function init() {
     let  nekoFile = "https://raw.githubusercontent.com/kyrie25/spicetify-oneko/refs/heads/main/assets/oneko/oneko-maia.gif";
+    // let  nekoFile = "https://ramx.in/oneko/oneko-ramxcodes.gif";
 
     const curScript = document.currentScript;
     if (curScript && curScript.dataset.cat) {
