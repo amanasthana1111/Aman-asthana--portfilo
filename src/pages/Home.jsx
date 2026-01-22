@@ -17,7 +17,6 @@ const Home = () => {
         <Hero />
         <Skills />
         <Project />
-
         <Github />
         <Connect />
         <Footer />

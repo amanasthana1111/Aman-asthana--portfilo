@@ -62,21 +62,26 @@ const ProjectCard = ({
                 <li key={index}>{point}</li>
               ))}
             </ul>
-            <div className="my-4 w-full">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+              className="my-4 w-full"
+            >
               <img
                 src={imgLink}
-                alt="Dog portrait"
-                width={612}
-                height={612}
+                alt={projectName}
+                loading="lazy"
                 className="w-full h-auto rounded-lg object-cover"
-                priority
               />
-            </div>
+            </motion.div>
+
             <div>
               {techStack.map((ele, index) => (
                 <motion.span
                   key={index}
-                  
+                  drag
+                  dragElastic={0.3}
                   className="inline-flex items-center gap-2 px-3 py-1 mx-1 rounded-md border border-white/10 text-[#f97316] text-sm"
                 >
                   {ele}
