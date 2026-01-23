@@ -78,9 +78,7 @@ const Home = () => {
             <p className="text-gray-500 text-sm mt-6">Loading music...</p>
           }
         >
-          <motion.div variants={fadeUp} initial="hidden" animate="visible">
-            <Song />
-          </motion.div>
+          <Song />
         </Suspense>
 
         <Credit />
