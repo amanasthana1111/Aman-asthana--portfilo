@@ -78,14 +78,12 @@ const ProjectCard = ({
 
             <div>
               {techStack.map((ele, index) => (
-                <motion.span
+                <span
                   key={index}
-                  drag
-                  dragElastic={0.3}
-                  className="inline-flex items-center gap-2 px-3 py-1 mx-1 rounded-md border border-white/10 text-[#f97316] text-sm"
+                  className="inline-flex items-center gap-2 px-3 py-1 mx-1 my-2 rounded-md border border-white/10 text-[#f97316] text-sm"
                 >
                   {ele}
-                </motion.span>
+                </span>
               ))}
             </div>
           </motion.div>
