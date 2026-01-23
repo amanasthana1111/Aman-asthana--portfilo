@@ -44,15 +44,15 @@ const Hero = () => {
           that are fast, reliable, and visually polished.
         </p>
 
-        <p className="text-base text-gray-400 mt-4">
-          Open to <span className=" text-orange-500">collaborations</span>
-          {", "}
-          <span className=" text-orange-500">internships</span>, engineering
+        <p className="mt-4 text-base text-gray-400">
+          Open to <span className="text-orange-500">collaborations</span>,{" "}
+          <span className="text-orange-500">internships</span>, and engineering
           challenges.{" "}
           <a
-            href="https://drive.google.com/file/d/1qrfo8rwNNcxULqe1kkMp57t8RakHSFfa/view?usp=sharing"
+            href="https://drive.google.com/file/d/1QTfraEQdceegGm7AVRN14a0_DmuSdQFl/view?usp=sharing"
             target="_blank"
-            className="text-orange-500"
+            rel="noopener noreferrer"
+            className="text-orange-500 hover:underline"
           >
             View Resume
           </a>

@@ -8,37 +8,16 @@ const ProjectCard = ({
   githubLink,
   deployLink,
   imgLink,
+  npmLink,
 }) => {
   const [open, setOpen] = useState(false);
-  const techColorMap = {
-    express: "#000000",
-    "mongodb (mongoose)": "#47A248",
-    redis: "#DC382D",
-    jwt: "#000000",
-    cookies: "#F59E0B",
-    bcrypt: "white",
-    multer: "#6B7280",
-    zod: "#3B82F6",
-    cloudinary: "#3448C5",
-    "google gemini ai": "#4285F4",
-    "google gemini ai api": "#4285F4",
-    react: "#61DAFB",
-    "react.js": "#61DAFB",
-    "react router": "#CA4245",
-    "tailwind css": "#06B6D4",
-    javascript: "#F7DF1E",
-    html5: "#E34F26",
-    css3: "#1572B6",
-    "chart.js": "#FF6384",
-    "coingecko api": "#8DC647",
-  };
 
   return (
     <div
       className=" font-[Myfont2] w-full rounded-xl border border-dashed
- border-white/10 bg-[#131311] p-5 hover:border-white/20 transition-colors mb-3"
+ border-white/10 bg-[#131311] p-5 hover:border-white/20 transition-colors mb-2"
     >
-      <h3 className="text-base text-white">{projectName}</h3>
+      <h3 className="text-base text-white font-light">{projectName}</h3>
 
       {/* Description */}
       <p className="mt-2 text-sm text-gray-400 leading-relaxed max-w-3xl">
@@ -80,7 +59,7 @@ const ProjectCard = ({
               {techStack.map((ele, index) => (
                 <span
                   key={index}
-                  className="inline-flex items-center gap-2 px-3 py-1 mx-1 my-2 rounded-md border border-white/10 text-[#f97316] text-sm"
+                  className="inline-flex items-center gap-2 px-3 py-1 mx-1 my-0.5 rounded-md border border-white/10 text-[#f97316] text-sm"
                 >
                   {ele}
                 </span>
@@ -95,34 +74,58 @@ const ProjectCard = ({
           onClick={() => setOpen(!open)}
           className="flex items-center gap-1 text-gray-400 hover:text-white transition-colors"
         >
-          <span className="cursor-pointer">
-            {open ? "Show less " : "Know More "}
+          <span className="cursor-pointer flex items-center gap-1">
+            {open ? "Show less" : "Know More"}
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4 transition-transform duration-200"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={1.5}
+            >
+              {open ? (
+                // ↑ caret (show less)
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m5 15 7-7 7 7"
+                />
+              ) : (
+                // ↓ caret (know more)
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m19 9-7 7-7-7"
+                />
+              )}
+            </svg>
           </span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={1.5}
-          >
-            {open ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m19 9-7 7-7-7"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m19 9-7 7-7-7"
-              />
-            )}
-          </svg>
         </button>
 
         <div className="flex items-center gap-6">
+          {npmLink && (
+  <a
+    href={npmLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="View NPM package"
+    className="inline-flex items-center"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 128 128"
+      className="h-7 w-auto"
+    >
+      <path
+        fill="#cb3837"
+        d="M2 38.5h124v43.71H64v7.29H36.44v-7.29H2zm6.89 36.43h13.78V53.07h6.89v21.86h6.89V45.79H8.89zm34.44-29.14v36.42h13.78v-7.28h13.78V45.79zm13.78 7.29H64v14.56h-6.89zm20.67-7.29v29.14h13.78V53.07h6.89v21.86h6.89V53.07h6.89v21.86h6.89V45.79z"
+      />
+    </svg>
+  </a>
+)}
+
           <a
             href={githubLink}
             target="_blank"

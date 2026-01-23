@@ -76,7 +76,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-3 mt-4 cursor-grab">
+      <div className="flex flex-wrap gap-2.5 mt-4 cursor-grab">
         {skills.map((skill) => (
           <motion.div
             drag

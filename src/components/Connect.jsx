@@ -35,22 +35,17 @@ const Connect = () => {
     logo: "https://cdn-icons-png.flaticon.com/512/174/174855.png",
     link: "https://instagram.com/aman_asthana12",
   },
-  {
-    name: "WhatsApp",
-    logo: "https://cdn-icons-png.flaticon.com/512/733/733585.png",
-    link: "https://wa.me/917982174178",
-  },
 ];
 
   return (
     <div className="mb-12">
-    <div className="text-sm font-['MyFont1'] text-gray-500 mt-12 mb-3 flex justify-between">
+    <div className="text-sm font-['MyFont1'] text-gray-500 mt-12 mb-2 flex justify-between">
         Connect with Me
         <div>
           <DragMe/>
         </div>
       </div>
-      <div className="flex flex-wrap gap-3 mt-4">
+      <div className="flex flex-wrap gap-3 mt-2">
         {connects.map((connect) => (
           <motion.div
             key={connect.name}

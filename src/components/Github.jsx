@@ -19,7 +19,7 @@ const Github = () => {
   }, []);
   return (
     <>
-      <div className="text-sm font-['MyFont1'] text-gray-500 mt-12 mb-3">
+      <div className="text-sm font-['MyFont1'] text-gray-500 mt-12 mb-2">
         GitHub Activity
       </div>
       <div

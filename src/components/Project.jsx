@@ -34,13 +34,15 @@ const Project = () => {
         "bcrypt",
       ],
       img: folify,
+      npmLink: null,
+
       githubLink: "https://github.com/amanasthana1111/PreWell--Backend",
       deployLink: "https://pre-well-frontend.vercel.app/",
     },
     {
-      projectName: "create-backend-setup",
+      projectName: "Create-backend-setup",
       projectDesc:
-        "An interactive CLI tool that scaffolds a production-ready Node.js backend with modern tooling and best practices.",
+        "Developed a production-ready, interactive Node.js CLI tool, reaching 1,105 downloads within 24 hours . Production backend with modern tooling and best practices.",
       projectSemiDesc: [
         "Instant backend setup with Express and TypeScript",
         "Schema validation using Zod",
@@ -62,6 +64,7 @@ const Project = () => {
         "cors",
       ],
       img: npm,
+      npmLink: "https://www.npmjs.com/package/create-backend-setup",
       githubLink: "https://github.com/amanasthana1111/create-backend-setup",
       deployLink:
         "https://create-backend-setup-frontend.vercel.app?_vercel_share=JFBNaK5Hl9TQTYMWakHw9fjwtXQhmgyk",
@@ -91,6 +94,8 @@ const Project = () => {
         "Prettier",
       ],
       img: brain,
+      npmLink: null,
+
       githubLink: "https://github.com/amanasthana1111/second-brain",
       deployLink: "https://github.com/amanasthana1111/second-brain",
     },
@@ -113,6 +118,8 @@ const Project = () => {
         "Google Gemini AI API",
       ],
       img: genify,
+      npmLink: null,
+
       githubLink: "https://github.com/amanasthana1111/GENIFY--Backend",
       deployLink: "https://regal-smakager-739bd9.netlify.app/",
     },
@@ -135,6 +142,8 @@ const Project = () => {
         "CSS3",
       ],
       img: crypto,
+      npmLink: null,
+
       githubLink: "https://github.com/amanasthana1111/CryptoTracker-main",
       deployLink: "https://unrivaled-pie-767488.netlify.app/",
     },
@@ -149,7 +158,7 @@ const Project = () => {
       </div>
 
       {/* Animated Container */}
-      <motion.div layout className="space-y-6">
+      <motion.div layout className="space-y-3">
         <AnimatePresence>
           {visibleProjects.map((ele, index) => (
             <motion.div
@@ -168,6 +177,7 @@ const Project = () => {
                 githubLink={ele.githubLink}
                 deployLink={ele.deployLink}
                 imgLink={ele.img}
+                npmLink={ele.npmLink}
               />
             </motion.div>
           ))}
