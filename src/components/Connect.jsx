@@ -1,4 +1,3 @@
-import {motion} from 'motion/react'
 import { DragMe } from './DragMe';
 
 
@@ -47,17 +46,8 @@ const Connect = () => {
       </div>
       <div className="flex flex-wrap gap-3 mt-2">
         {connects.map((connect) => (
-          <motion.div
+          <div
             key={connect.name}
-            drag
-            dragConstraints= {{
-              top : 0,
-              bottom:0,
-              left:0,
-              right:0
-
-            }}
-            dragElastic = {0.3}
             className="flex items-center gap-2 px-3 py-2 rounded-md
                    border border-white/10 bg-[#131311]
                    text-sm text-gray-200 hover:border-white/30
@@ -66,7 +56,7 @@ const Connect = () => {
             <img
              src={connect.logo} alt={connect.name} className="w-4 h-4" />
             <a  target="_blank" href={connect.link}><span className=" hover:text-orange-400  ">{connect.name}</span></a>
-          </motion.div>
+          </div>
         ))}
       </div>
       

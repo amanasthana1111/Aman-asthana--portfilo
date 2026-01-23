@@ -6,7 +6,7 @@ const Hero = () => {
           target="_blank"
           href="https://drive.google.com/file/d/1qrfo8rwNNcxULqe1kkMp57t8RakHSFfa/view?usp=sharing"
         >
-          <h1 className="text-xl cursor-pointer">Aman Asthana</h1>
+          <h1 className="text-2xl">Aman Asthana</h1>
         </a>
 
         <p className="text-base mt-2 text-[#787572]">Software Engineer</p>
@@ -49,7 +49,7 @@ const Hero = () => {
           <span className="text-orange-500">internships</span>, and engineering
           challenges.{" "}
           <a
-            href="https://drive.google.com/file/d/1QTfraEQdceegGm7AVRN14a0_DmuSdQFl/view?usp=sharing"
+            href="https://drive.google.com/file/d/14dd0tirpWZLWKgACcA0yKSdEpOKc-OSt/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="text-orange-500 hover:underline"
