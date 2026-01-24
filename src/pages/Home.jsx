@@ -23,7 +23,7 @@ const fadeUp = {
 
 const Home = () => {
   return (
-    <div className="w-full bg-[#0f0f0f] min-h-screen">
+    <div className="w-full bg-[#000000] min-h-screen">
       <div className="max-w-2xl mx-auto px-6">
         <motion.div variants={fadeUp} initial="hidden" animate="visible">
           <Header />
