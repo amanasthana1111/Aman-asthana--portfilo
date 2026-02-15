@@ -54,15 +54,15 @@ const Skills = () => {
       logo: "https://cdn-icons-png.flaticon.com/512/14702/14702591.png",
     },
     {
-      name: "Operating Systems",
+      name: "OS",
       logo: "https://cdn-icons-png.flaticon.com/512/7655/7655685.png",
     },
     {
-      name: "Computer Networks",
+      name: "CN",
       logo: "https://cdn-icons-png.flaticon.com/512/2103/2103658.png",
     },
     {
-      name: "Basic System Design",
+      name: "System Design",
       logo: "https://cdn-icons-png.flaticon.com/512/5979/5979577.png",
     },
   ];
