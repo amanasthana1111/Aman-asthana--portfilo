@@ -1,86 +1,110 @@
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 
-const USERNAME = "amanasthana1111";
+const USERNAME = "amanasthana1212";
 
-const Github = () => {
-  const scrollRef = useRef(null);
+const LeetCode = () => {
+    const scrollRef = useRef(null);
 
-  const [heatmap, setHeatmap] = useState([]);
+  const [heatmap, setHeatmap] = useState({});
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    const fetchGithub = async () => {
+    const fetchLeetCode = async () => {
       try {
         const res = await axios.get(
-          `https://gitleet.tech/api/github?username=${USERNAME}`
+          `https://gitleet.tech/api/leetcode?username=${USERNAME}`
         );
 
-        const calendar =
-          res?.data?.data?.user?.contributionsCollection?.contributionCalendar;
+        const calendarString =
+          res?.data?.data?.matchedUser?.submissionCalendar;
 
-        if (!calendar) {
-          setHeatmap([]);
+        if (!calendarString) {
+          setHeatmap({});
           setTotal(0);
           return;
         }
 
-        setTotal(calendar.totalContributions);
+        const parsed = JSON.parse(calendarString);
+        setHeatmap(parsed);
 
-        // Flatten weeks into single array
-        const days = calendar.weeks.flatMap((week) =>
-          week.contributionDays
+        const totalSubmissions = Object.values(parsed).reduce(
+          (acc, val) => acc + val,
+          0
         );
 
-        setHeatmap(days);
+        setTotal(totalSubmissions);
       } catch (error) {
-        console.error("GitHub API Error:", error);
-        setHeatmap([]);
+        console.error("API Error:", error);
+        setHeatmap({});
         setTotal(0);
       }
     };
 
-    fetchGithub();
+    fetchLeetCode();
   }, []);
+useEffect(() => {
+  if (scrollRef.current) {
+    scrollRef.current.scrollLeft = scrollRef.current.scrollWidth;
+  }
+}, [heatmap]);
 
-  // Auto scroll to latest
-  useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollLeft = scrollRef.current.scrollWidth;
+  const generateDays = () => {
+    const days = [];
+    const today = new Date();
+
+    for (let i = 364; i >= 0; i--) {
+      const date = new Date(
+        Date.UTC(
+          today.getUTCFullYear(),
+          today.getUTCMonth(),
+          today.getUTCDate() - i
+        )
+      );
+
+      const timestamp = Math.floor(date.getTime() / 1000);
+
+      days.push({
+        date: date.toISOString().split("T")[0],
+        count: heatmap?.[timestamp] ?? 0,
+        month: date.getUTCMonth(),
+        day: date.getUTCDate(),
+      });
     }
-  }, [heatmap]);
 
-  // Dynamic month labels
+    return days;
+  };
+
+  const days = generateDays();
+
   const monthLabels = [];
   let lastMonth = -1;
 
-  heatmap.forEach((day, index) => {
-    const date = new Date(day.date);
-    const month = date.getMonth();
-    const dayOfMonth = date.getDate();
-
-    if (month !== lastMonth && dayOfMonth <= 7) {
+  days.forEach((day, index) => {
+    if (day.month !== lastMonth && day.day <= 7) {
       monthLabels.push({
-        month,
+        month: day.month,
         index,
       });
-      lastMonth = month;
+      lastMonth = day.month;
     }
   });
 
-const getColor = (count) => {
-  if (count === 0) return "bg-[#161b22]";      // no activity
-  if (count <= 2) return "bg-[#0e4429]";      // 1–2
-  if (count <= 5) return "bg-[#006d32]";      // 3–5
-  return "bg-[#2ea043]";                      // 6+
-};
+  const getColor = (count) => {
+    if (count === 0) return "bg-[#161b22]";
+    if (count < 3) return "bg-[#0e4429]";
+    if (count < 6) return "bg-[#006d32]";
+    if (count < 10) return "bg-[#26a641]";
+    return "bg-[#2ea043]";
+  };
 
   return (
     <div className="mt-12">
-      <div className="text-sm text-gray-500 mb-4 font-['MyFont1']">
-        GitHub Activity
+      <div className="text-sm text-gray-500 mb-4 font-['MyFont1'] ">
+        LeetCode Activity
       </div>
 
+      {/* CARD */}
       <div className="w-full rounded-xl border border-[#30363d]
       bg-[#131311] px-3 py-3 overflow-hidden">
 
@@ -91,7 +115,7 @@ const getColor = (count) => {
               key={i}
               className="absolute text-xs text-gray-500"
               style={{
-                left: `${(item.index / heatmap.length) * 100}%`,
+                left: `${(item.index / days.length) * 100}%`,
               }}
             >
               {new Date(2025, item.month).toLocaleString("default", {
@@ -109,37 +133,36 @@ const getColor = (count) => {
             <span>Fri</span>
           </div>
 
-          {/* Scrollable Grid */}
+          {/* Scroll Wrapper */}
           <div className="flex-1 overflow-hidden">
-            <div
-              ref={scrollRef}
-              className="overflow-x-auto custom-scroll pb-2"
-            >
-              <div
-                className="grid gap-0.5"
-                style={{
-                  gridAutoFlow: "column",
-                  gridTemplateRows: "repeat(7, 12px)",
-                  width: "max-content",
-                }}
-              >
-                {heatmap.map((day, index) => (
-                  <div
-                    key={index}
-                    title={`${day.date} - ${day.contributionCount} contributions`}
-                    className={`w-3 h-3 rounded-sm ${getColor(
-                      day.contributionCount
-                    )}`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
+  <div
+    ref={scrollRef}
+    className="overflow-x-auto custom-scroll pb-2"
+  >
+    <div
+      className="grid gap-0.5"
+      style={{
+        gridAutoFlow: "column",
+        gridTemplateRows: "repeat(7, 12px)",
+        width: "max-content",
+      }}
+    >
+      {days.map((day, index) => (
+        <div
+          key={index}
+          title={`${day.date} - ${day.count} submissions`}
+          className={`w-3 h-3 rounded-sm ${getColor(day.count)}`}
+        />
+      ))}
+    </div>
+  </div>
+</div>
+
         </div>
 
         {/* Footer */}
         <div className="flex justify-between mt-2 text-sm text-gray-400">
-          <span>Total: {total} contributions</span>
+          <span>Total: {total} submissions</span>
 
           <div className="flex items-center gap-1">
             <span>Less</span>
@@ -155,7 +178,7 @@ const getColor = (count) => {
         </div>
       </div>
 
-      {/* Thin Black Scrollbar */}
+      {/* Thin Scrollbar */}
       <style>
         {`
         .custom-scroll::-webkit-scrollbar {
@@ -185,4 +208,4 @@ const getColor = (count) => {
   );
 };
 
-export default Github;
+export default LeetCode;

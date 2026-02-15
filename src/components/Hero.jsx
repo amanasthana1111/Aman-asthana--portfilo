@@ -2,25 +2,22 @@ const Hero = () => {
   return (
     <section className="w-full text-white mt-4 mb-4">
       <div className="font-['MyFont2']">
-        <a
-          target="_blank"
-          href="https://drive.google.com/file/d/1qrfo8rwNNcxULqe1kkMp57t8RakHSFfa/view?usp=sharing"
-        >
-          <h1 className="text-2xl">Aman Asthana</h1>
-        </a>
+        <h1 className="text-2xl">Aman Asthana</h1>
 
-        <p className="text-base mt-2 text-[#787572]">Software Engineer</p>
+        <p className="text-base mt-2 text-[#787572]">
+          Full-Stack Software Engineer
+        </p>
 
-        <p className=" text-[15px] max-w-3xl  leading-relaxed text-gray-300 mt-4">
+        <p className="text-[15px] max-w-3xl leading-relaxed text-gray-300 mt-4">
           I build{" "}
-          <span className="text-orange-400">full-stack applications.</span>{" "}
-          Passionate about creating projects that make a{" "}
-          <span className="text-orange-400"> real-world impact.</span> I focus
-          on clean code and user experience.
+          <span className="text-orange-400">full-stack web applications</span>{" "}
+          that solve real-world problems. Passionate about crafting{" "}
+          <span className="text-orange-400">clean, efficient code</span> and
+          delivering exceptional user experiences.
         </p>
 
         <p className="text-gray-400 mt-4 leading-relaxed">
-          Previously worked on{" "}
+          Previously contributed to modern web platforms like{" "}
           <span
             className="inline-flex items-center gap-2 px-2 py-0.5 mx-1 rounded-md 
                    bg-[#161616] border border-white/10 text-gray-200 text-sm 
@@ -31,13 +28,13 @@ const Hero = () => {
                 Folify
               </span>
             </a>
-          </span>{" "}
-          modern web platforms , contributing to AI-driven and user-centric
-          products.
+          </span>
+          , an AI-driven project focused on user-centric design and
+          functionality.
         </p>
 
         <p className="text-base text-gray-400 mt-4">
-          Most days I work with{" "}
+          Currently, I work extensively with{" "}
           <span className="text-orange-500 ">Next.js</span>,{" "}
           <span className="text-orange-500 ">Express.js</span>, and{" "}
           <span className="text-orange-500 ">TypeScript</span>, building systems
@@ -46,10 +43,10 @@ const Hero = () => {
 
         <p className="mt-4 text-base text-gray-400">
           Open to <span className="text-orange-500">collaborations</span>,{" "}
-          <span className="text-orange-500">internships</span>, and engineering
-          challenges.{" "}
+          <span className="text-orange-500">internships</span>, and innovative
+          engineering challenges.{" "}
           <a
-            href="https://drive.google.com/file/d/14dd0tirpWZLWKgACcA0yKSdEpOKc-OSt/view?usp=sharing"
+            href="https://drive.google.com/file/d/1B4XhycOsGdZrH-14lvd4Lm2SHp10RJNw/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="text-orange-500 hover:underline"
