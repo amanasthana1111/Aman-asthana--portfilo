@@ -8,11 +8,11 @@ const Hero = () => {
           Full-Stack Software Engineer
         </p>
 
-        <p className="text-[15px] max-w-3xl leading-relaxed text-gray-300 mt-4">
+        <p className="text-[15px] max-w-3xl leading-relaxed text-gray-400 mt-4">
           I build{" "}
-          <span className="text-orange-400">full-stack web applications</span>{" "}
+          <span className="text-orange-500">full-stack web applications</span>{" "}
           that solve real-world problems. Passionate about crafting{" "}
-          <span className="text-orange-400">clean, efficient code</span> and
+          <span className="text-orange-500">clean, efficient code</span> and
           delivering exceptional user experiences.
         </p>
 

@@ -85,21 +85,23 @@ const getColor = (count) => {
       bg-[#131311] px-3 py-3 overflow-hidden">
 
         {/* Month Labels */}
-        <div className="relative ml-10 mb-3 h-4 font-['MyFont1']">
-          {monthLabels.map((item, i) => (
-            <span
-              key={i}
-              className="absolute text-xs text-gray-500"
-              style={{
-                left: `${(item.index / heatmap.length) * 100}%`,
-              }}
-            >
-              {new Date(2025, item.month).toLocaleString("default", {
-                month: "short",
-              })}
-            </span>
-          ))}
-        </div>
+        <div className="relative ml-8 mb-4 h-5 font-['MyFont1'] overflow-hidden">
+  {monthLabels.map((item, i) => (
+    <span
+      key={i}
+      className="absolute text-[10px] sm:text-xs text-gray-500 whitespace-nowrap"
+      style={{
+        left: `calc(${(item.index / heatmap.length) * 100}% - 12px)`,
+      }}
+    >
+      {new Date(2025, item.month).toLocaleString("default", {
+        month: "short",
+      })}
+    </span>
+  ))}
+</div>
+
+        
 
         <div className="flex">
           {/* Week Labels */}
