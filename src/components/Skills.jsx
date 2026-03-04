@@ -36,9 +36,9 @@ const Skills = () => {
       logo: "https://hexmos.com/freedevtools/svg_icons/zustand/zustand-original.svg",
     },
     { name: "Redis", logo: "https://cdn.simpleicons.org/redis/DC382D" },
-    //   { name: "Docker", logo: "https://cdn.simpleicons.org/docker/2496ED" },
+       { name: "Docker", logo: "https://cdn.simpleicons.org/docker/2496ED" },
     //   { name: "CI/CD", logo: "https://cdn.simpleicons.org/githubactions/2088FF" },
-    //   { name: "Turborepo", logo: "https://cdn.simpleicons.org/turborepo/FFFFFF" },
+       { name: "Turborepo", logo: "https://cdn.simpleicons.org/turborepo/FFFFFF" },
     { name: "Postman", logo: "https://cdn.simpleicons.org/postman/FF6C37" },
     { name: "Git", logo: "https://cdn.simpleicons.org/git/F05032" },
     {

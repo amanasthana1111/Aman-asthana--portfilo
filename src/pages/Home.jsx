@@ -10,6 +10,7 @@ import Hero from "../components/Hero";
 import Project from "../components/Project";
 import Skills from "../components/Skills";
 import LeetCode from "../components/Leetcode";
+import Achievements from "../components/Achievements";
 
 const Song = lazy(() => import("../components/Song"));
 
@@ -70,6 +71,14 @@ const Home = () => {
           <Github />
         </motion.div>
         
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <Achievements />
+        </motion.div>
 
         <motion.div
           variants={fadeUp}

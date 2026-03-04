@@ -42,17 +42,19 @@ const Hero = () => {
         </p>
 
         <p className="mt-4 text-base text-gray-400">
-          Open to <span className="text-orange-500">collaborations</span>,{" "}
-          <span className="text-orange-500">internships</span>, and innovative
-          engineering challenges.{" "}
-          <a
-            href="https://drive.google.com/file/d/1B4XhycOsGdZrH-14lvd4Lm2SHp10RJNw/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-orange-500 hover:underline"
+          <span
+            className="inline-flex items-center gap-2 px-2 py-0.5 mx-1 rounded-md 
+               bg-[#161616] border border-white/10 text-sm align-middle"
           >
-            View Resume
-          </a>
+            <a
+              href="https://drive.google.com/file/d/1B4XhycOsGdZrH-14lvd4Lm2SHp10RJNw/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="leading-none text-red-700 hover:text-red-500 cursor-pointer"
+            >
+              Download Resume
+            </a>
+          </span>
         </p>
       </div>
     </section>

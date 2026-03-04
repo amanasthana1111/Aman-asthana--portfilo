@@ -1,6 +1,6 @@
 import React from "react";
 
-export const DragMe = () => {
+export const DragMe = ({word = "drag me!" }) => {
   return (
     <svg
       width="80"
@@ -33,7 +33,7 @@ export const DragMe = () => {
         fill="currentColor"
         className="text-[10px] font-['MyFont1'] text-gray-500"
       >
-        drag me!
+        {word}
       </text>
     </svg>
   );
