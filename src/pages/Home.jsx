@@ -11,6 +11,7 @@ import Project from "../components/Project";
 import Skills from "../components/Skills";
 import LeetCode from "../components/Leetcode";
 import Achievements from "../components/Achievements";
+import Blog from "../components/Blog";
 
 const Song = lazy(() => import("../components/Song"));
 
@@ -78,6 +79,15 @@ const Home = () => {
           viewport={{ once: true }}
         >
           <Achievements />
+        </motion.div>
+
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <Blog />
         </motion.div>
 
         <motion.div
