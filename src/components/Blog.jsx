@@ -1,12 +1,29 @@
+import { useState } from "react";
 import BlogCard from "./BlogCard";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 const Blog = () => {
+
+   const navigate = useNavigate();
+  const [count, setCount] = useState(0);
+
+    const handleClickk = () => {
+    const newCount = count + 1;
+    setCount(newCount);
+
+    if (newCount === 10) {
+      navigate("/amanasthana12");
+    }
+  };
+
+
   return (
     <>
       {/* Header */}
       <div className="text-sm font-['MyFont1'] text-gray-500 mt-8 flex justify-between">
-        <div>Blogs</div>
+        <div onClick={handleClickk}>Blogs</div>
       </div>
 
       {/* Blog Cards */}
