@@ -11,6 +11,7 @@ const Blog = () => {
 
     const handleClickk = () => {
     const newCount = count + 1;
+    console.log(newCount)
     setCount(newCount);
 
     if (newCount === 10) {
