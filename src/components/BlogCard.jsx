@@ -17,7 +17,7 @@ const BlogCard = ({ img, title, desc, tags = [], date, id }) => {
       {/* Content */}
       <div className="p-5">
         {/* Title */}
-        <h3 className="text-xl font-semibold text-white font-light">{title}</h3>
+        <h3 className="text-xl font-semibold text-white">{title}</h3>
 
         {/* Description */}
         <p className="mt-2 text-gray-400 text-sm">{desc}</p>

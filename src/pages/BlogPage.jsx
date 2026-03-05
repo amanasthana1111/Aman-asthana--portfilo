@@ -20,48 +20,23 @@ const fadeUp = {
 
 const BlogPage = () => {
 
-  // const [blogs, setBlogs] = useState([]);
+  const [blogs, setBlogs] = useState([]);
 
-  const blogs = [
-    {
-      id: "nextjs-optimisation",
-      img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
-      title: "Optimising Next.js Apps",
-      desc: "Learn practical techniques to optimise your Next.js applications.",
-      tags: ["Next.js", "Performance", "Frontend"],
-      date: "January 31, 2026"
-    },
-    {
-      id: "react-performance",
-      img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee",
-      title: "React Performance Tips",
-      desc: "Understand React rendering behaviour and optimisation strategies.",
-      tags: ["React", "JavaScript", "Frontend"],
-      date: "February 10, 2026"
-    },
-    {
-      id: "system-design-basics",
-      img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
-      title: "System Design Basics",
-      desc: "A beginner friendly guide to system design concepts.",
-      tags: ["System Design", "Backend"],
-      date: "February 20, 2026"
-    }
-  ];
 
-  //     useEffect(() => {
-  //   const fetchBlogs = async () => {
-  //     try {
-  //       const res = await fetch("http://localhost:5000/blogs"); // your API
-  //       const data = await res.json();
-  //       setBlogs(data);
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   };
 
-  //   fetchBlogs();
-  // }, []);
+      useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const res = await fetch("https://aman-asthana-backend.onrender.com/blogs"); // your API
+        const data = await res.json();
+        setBlogs(data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
 
   return (
     <div className="w-full bg-[#000000] min-h-screen">

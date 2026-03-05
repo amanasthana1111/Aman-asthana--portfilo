@@ -23,47 +23,22 @@ const fadeUp = {
 const BlogPageContent = () => {
     const Song = lazy(() => import("../components/Song"));
   const { id } = useParams();
-  const blog = {
-    id: "nextjs-optimisation",
-    title: "Optimising Next.js Applications for Performance",
-    date: "January 31, 2026",
-    desc: "Next.js is powerful, but without proper optimisation your app can become slow. In this guide we explore simple strategies to improve performance.",
+    const [blog, setBlog] = useState(null);
 
-    tags: ["Next.js", "Performance", "Frontend", "JavaScript"],
+    useEffect(() => {
+       window.scrollTo(0,0);
+      const fetchBlog = async () => {
+        try {
+          const res = await fetch(`https://aman-asthana-backend.onrender.com/blogs/${id}`);
+          const data = await res.json();
+          setBlog(data);
+        } catch (err) {
+          console.log(err);
+        }
+      };
 
-    imglink: "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
-
-    paragraphs: [
-      "Next.js provides many built-in optimisations such as server-side rendering, static generation, and image optimisation. However, developers must still follow best practices to fully benefit from these features.",
-
-      "One of the most important steps is reducing unnecessary re-renders. Using memoization techniques like React.memo, useMemo, and useCallback can significantly improve performance in larger applications.",
-
-      "Another key optimisation is code splitting. Next.js automatically splits your bundles by route, but dynamic imports can help load heavy components only when needed.",
-
-      "Finally, optimising images and reducing unused JavaScript can drastically improve loading time. Tools like Lighthouse and Web Vitals can help identify bottlenecks.",
-    ],
-
-    moreImg: [
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475",
-      "https://images.unsplash.com/photo-1633356122544-f134324a6cee",
-    ],
-  };
-  //   const [blog, setBlog] = useState(null);
-
-  //   useEffect(() => {
-  //     const fetchBlog = async () => {
-  //       try {
-  //         const res = await fetch(`http://localhost:5000/blogs/${id}`);
-  //         const data = await res.json();
-  //         setBlog(data);
-  //       } catch (err) {
-  //         console.log(err);
-  //       }
-  //     };
-
-  //     fetchBlog();
-  //   }, [id]);
+      fetchBlog();
+    }, [id]);
 
   if (!blog) {
     return <p className="text-gray-400 text-sm mt-6">Loading blog...</p>;
