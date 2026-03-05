@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { motion } from "motion/react";
 
 import Connect from "../components/Connect";
