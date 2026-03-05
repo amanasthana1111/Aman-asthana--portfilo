@@ -56,7 +56,7 @@ const BlogPage = () => {
           {blogs.map((blog) => (
             <BlogCard
               key={blog.id}
-              img={blog.img}
+              img={blog.imglink}
               title={blog.title}
               desc={blog.desc}
               tags={blog.tags}

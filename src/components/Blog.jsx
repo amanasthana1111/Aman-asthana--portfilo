@@ -1,4 +1,3 @@
-import { DragMe } from "./DragMe";
 import BlogCard from "./BlogCard";
 import { Link } from "react-router-dom";
 
@@ -8,10 +7,6 @@ const Blog = () => {
       {/* Header */}
       <div className="text-sm font-['MyFont1'] text-gray-500 mt-8 flex justify-between">
         <div>Blogs</div>
-
-        <div>
-          <DragMe word={"Feature"} />
-        </div>
       </div>
 
       {/* Blog Cards */}

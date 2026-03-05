@@ -4,14 +4,9 @@ import { Link } from "react-router-dom";
 const BlogCard = ({ img, title, desc, tags = [], date, id }) => {
   return (
     <div className="max-w-sm rounded-2xl border border-white/10 bg-[#0f0f0f] overflow-hidden hover:border-white/20 transition">
-      
       {/* Image */}
       <div className="h-48 w-full overflow-hidden">
-        <img
-          src={img}
-          alt={title}
-          className="w-full h-full object-cover"
-        />
+        <img src={img} alt={title} className="w-full h-full object-cover" />
       </div>
 
       {/* Content */}
@@ -43,7 +38,11 @@ const BlogCard = ({ img, title, desc, tags = [], date, id }) => {
         <div className="flex items-center justify-between mt-6 text-sm text-gray-400">
           <div className="flex items-center gap-2">
             <FaRegCalendar className="text-xs" />
-            {date}
+            {new Date(date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
           </div>
 
           <Link
