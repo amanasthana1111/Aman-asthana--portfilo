@@ -2,7 +2,8 @@ const Hero = () => {
   return (
     <section className="w-full text-white mt-4 mb-4">
       <div className="font-['MyFont2']">
-        <h1 className="text-2xl">Aman Asthana</h1>
+        <h1 className="text-2xl">Aman Asthana</h1>{" "}
+        
 
         <p className="text-base mt-2 text-[#787572]">
           Full-Stack Software Engineer

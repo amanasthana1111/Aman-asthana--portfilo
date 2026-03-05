@@ -40,9 +40,6 @@ const Connect = () => {
     <div className="mb-12">
     <div className="text-sm font-['MyFont1'] text-gray-500 mt-12 mb-2 flex justify-between">
         Connect with Me
-        <div>
-          <DragMe/>
-        </div>
       </div>
       <div className="flex flex-wrap gap-3 mt-2">
         {connects.map((connect) => (

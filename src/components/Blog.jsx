@@ -30,7 +30,7 @@ const Blog = () => {
       {/* Blog Cards */}
       <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
         <BlogCard
-          img="https://st.perplexity.ai/estatic/0b226c450798410ac541646c86ec31afd840e5beab817a5d84fa821e7db61981ec84c3b4a3f072a7a2e1899c9fb06c6e247cb513308e6a22189257eb81445ec7a5231715bffbedf1ca7e9a686e391dad1f7757cca3e9424acce921ad81e7c9bf"
+          img="https://images.unsplash.com/photo-1555066931-4365d14bab8c"
           title="How to optimise a Next.js web app"
           desc="Optimise your Next.js web app to make it lightning fast!"
           tags={["Frontend", "Next.Js", "JavaScript", "Performance"]}
@@ -39,7 +39,7 @@ const Blog = () => {
         />
 
         <BlogCard
-          img="/blog2.jpg"
+          img="https://images.unsplash.com/photo-1633356122544-f134324a6cee"
           title="Understanding React Performance"
           desc="Tips and tricks to improve React app performance."
           tags={["React", "Performance", "Frontend"]}
