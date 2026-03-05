@@ -2,7 +2,7 @@ import {Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import BlogPage from "./pages/BlogPage.jsx";
 import BlogPageContent from "./pages/BlogPageContent.jsx";
-import BlogAdmin from "./pages/preview.jsx";
+import BlogAdmin from "./pages/BlogAdmin.jsx";
 
 function App() {
   return (
