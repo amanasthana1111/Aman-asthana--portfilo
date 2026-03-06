@@ -31,20 +31,20 @@ const Blog = () => {
       <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
         <BlogCard
           img="https://images.unsplash.com/photo-1555066931-4365d14bab8c"
-          title="How to optimise a Next.js web app"
-          desc="Optimise your Next.js web app to make it lightning fast!"
-          tags={["Frontend", "Next.Js", "JavaScript", "Performance"]}
+          title="Binary Search on Answer and Linked List Pattern Revision"
+          desc="Today I revised important Data Structures and Algorithms patterns including Binary Search problems and Linked List."
+          tags={["Dsa", "BinarySearch","Linked List"]}
           date="January 31, 2026"
-          id="nextjs-optimisation"
+          id="dsa-revision-binary-search-linkedlist-001"
         />
 
         <BlogCard
-          img="https://images.unsplash.com/photo-1633356122544-f134324a6cee"
-          title="Understanding React Performance"
-          desc="Tips and tricks to improve React app performance."
-          tags={["React", "Performance", "Frontend"]}
+          img="https://images.unsplash.com/photo-1515879218367-8466d910aaa4"
+          title="Binary Search Revision"
+          desc="Today I revised the complete Binary Search concept from A to Z by going through 26 videos and problems. This revision covered multiple patterns like standard binary search, first and last occurrence, rotated arrays, peak element, and binary search on answer."
+          tags={["Dsa", "BinarySearch"]}
           date="February 10, 2026"
-          id="react-performance"
+          id="binary-search-revision-a-to-z"
         />
       </div>
       <div className="flex justify-center mt-6">
