@@ -11,6 +11,36 @@ const Project = () => {
   const [projectShow, setProjectShow] = useState(false);
   const project = [
     {
+      projectName: "Payflow",
+      projectDesc:
+        "A production-grade Razorpay-like payment gateway built with microservices architecture — supports orders, payments, refunds, settlements, webhooks, and a hosted checkout UI.",
+      projectSemiDesc: [
+        "9 independent microservices with Turborepo monorepo",
+        "BullMQ webhook delivery with exponential backoff retries",
+        "Redis-powered idempotency and rate limiting (100 req/min)",
+        "HMAC SHA-256 webhook signature verification",
+        "Published @amanasthana1111/payflow-sdk on npm",
+      ],
+      techStack: [
+        "Node.js",
+        "TypeScript",
+        "Fastify",
+        "PostgreSQL",
+        "Prisma",
+        "Redis",
+        "BullMQ",
+        "JWT",
+        "Docker",
+        "Turborepo",
+        "Twilio",
+        "Zod",
+      ],
+      img: payflow,
+      npmLink: "https://www.npmjs.com/package/@amanasthana1111/payflow-sdk",
+      githubLink: "https://github.com/amanasthana1111/payflow",
+      deployLink: null,
+    },
+    {
       projectName: "Folify ",
       projectDesc:
         "A full-stack AI platform for ATS resume analysis, interview preparation, and portfolio generation.",
