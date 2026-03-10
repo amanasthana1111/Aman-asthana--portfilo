@@ -4,6 +4,7 @@ import crypto from "../assets/crypto.png";
 import genify from "../assets/genify.png";
 import npm from "../assets/npm.png";
 import brain from "../assets/brain.png";
+import payflow from "../assets/payflow.png"
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
