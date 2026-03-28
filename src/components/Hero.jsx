@@ -48,7 +48,7 @@ const Hero = () => {
                bg-[#161616] border border-white/10 text-sm align-middle"
           >
             <a
-              href="https://drive.google.com/file/d/1Jz_X7FU2v6ot1LNr4ts4xREsAffINu1k/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1ZIXoQOyNxg-XkTK5ej9yhPzJOYUmCBeC/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="leading-none text-red-700 hover:text-red-500 cursor-pointer"
