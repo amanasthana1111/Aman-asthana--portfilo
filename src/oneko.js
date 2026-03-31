@@ -1,4 +1,6 @@
 // oneko.js: https://github.com/adryd325/oneko.js
+import one from "./assets/oneko-maia.gif"
+import aman from "./assets/aman.png"
 
 (function oneko() {
   const isReducedMotion =
@@ -86,8 +88,8 @@
   };
 
   function init() {
-    let  nekoFile = "https://raw.githubusercontent.com/kyrie25/spicetify-oneko/refs/heads/main/assets/oneko/oneko-maia.gif";
-    // let  nekoFile = "https://ramx.in/oneko/oneko-ramxcodes.gif";
+    // let  nekoFile = "https://raw.githubusercontent.com/kyrie25/spicetify-oneko/refs/heads/main/assets/oneko/oneko-maia.gif";
+    let  nekoFile = one;
 
     const curScript = document.currentScript;
     if (curScript && curScript.dataset.cat) {
@@ -170,7 +172,7 @@
     if (!lastFrameTimestamp) {
       lastFrameTimestamp = timestamp;
     }
-    if (timestamp - lastFrameTimestamp > 100) {
+    if (timestamp - lastFrameTimestamp > 25) {
       lastFrameTimestamp = timestamp;
       frame();
     }
