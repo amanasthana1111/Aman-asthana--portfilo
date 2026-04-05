@@ -4,7 +4,8 @@ import crypto from "../assets/crypto.png";
 import genify from "../assets/genify.png";
 import npm from "../assets/npm.png";
 import brain from "../assets/brain.png";
-import payflow from "../assets/payflow.png"
+import payflow from "../assets/payflow.png";
+import financeBackend from "../assets/financeBackend.png"
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -40,6 +41,33 @@ const Project = () => {
       npmLink: "https://www.npmjs.com/package/@amanasthana1111/payflow-sdk",
       githubLink: "https://github.com/amanasthana1111/payflow",
       deployLink: null,
+    },
+    {
+      projectName: "Finance Data Processing & Access Control API",
+      projectDesc:
+        "A production-grade Finance Backend built for Zorvyn FinTech — supports RBAC-based access control, financial records CRUD, dashboard aggregations, and user management with JWT auth.",
+      projectSemiDesc: [
+        "3-tier RBAC system (VIEWER / ANALYST / ADMIN) enforced via middleware",
+        "Dashboard analytics — summary, trends, recent records, and category breakdowns",
+        "Soft delete for audit compliance with Decimal precision for financial data",
+        "Rate limiting on auth routes with Zod input validation across all endpoints",
+        "Swagger docs at /docs with live deployment on Render",
+      ],
+      techStack: [
+        "Node.js",
+        "TypeScript",
+        "Express",
+        "PostgreSQL",
+        "Prisma",
+        "Redis",
+        "JWT",
+        "Zod",
+        "Docker",
+      ],
+      img: financeBackend,
+      npmLink: null,
+      githubLink: "https://github.com/amanasthana1111/finance-backend",
+      deployLink: "https://finance-backend-8nig.onrender.com/",
     },
     {
       projectName: "Folify ",
