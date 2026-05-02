@@ -15,16 +15,6 @@ const Connect = () => {
     link: "https://github.com/amanasthana1111",
   },
   {
-    name: "LeetCode",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png",
-    link: "https://leetcode.com/amanasthana1212",
-  },
-  {
-    name: "GeeksforGeeks",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg",
-    link: "https://auth.geeksforgeeks.org/user/amanasthfl2r",
-  },
-  {
     name: "Email",
     logo: "https://cdn-icons-png.flaticon.com/512/732/732200.png",
     link: "mailto:amanasthana20051@gmail.com",
